@@ -2,11 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
    <c:param name="content">
-      <c:if test="${flush!=null}">
-         <div id="flush_success">
-            <c:out value="${flush}"></c:out>
-         </div>
-      </c:if>
+
       <h2>投稿者一覧</h2>
       <table id="poster_list">
          <tbody>
@@ -19,7 +15,7 @@
                <tr class="row${status.count%2}">
                   <td><c:out value="${poster.name}"/></td>
                   <td>
-                     <a href="<c:url value='/reviews/userIndex?id=${poster.id}' />">レビュー一覧</a>
+                     <a href="<c:url value='/reviews/userIndex?id=${poster.id}' />">一覧</a>
                   </td>
                   <td>
                      <a href="<c:url value='/posters/show?id=${poster.id}' />">詳細を表示</a>
