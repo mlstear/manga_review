@@ -41,7 +41,7 @@ public class LoginFilter implements Filter {
         String context_path=((HttpServletRequest)request).getContextPath();
         String servlet_path=((HttpServletRequest)request).getServletPath();
 
-        if(!servlet_path.matches("/css.*")){
+        if(!servlet_path.matches("/css.*")&&!servlet_path.matches("/posters/new")&&!servlet_path.matches("/posters/create")){
             HttpSession session=((HttpServletRequest)request).getSession();
 
             Poster p=(Poster)session.getAttribute("login_poster");

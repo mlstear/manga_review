@@ -27,7 +27,9 @@
                   </tr>
                </tbody>
             </table>
-            <p><a href="<c:url value='/posters/edit?id=${poster.id}' />">登録情報を編集する</a></p>
+            <c:if test="${sessionScope.login_poster.id == poster.id}">
+               <p><a href="<c:url value='/posters/edit?id=${poster.id}' />">登録情報を編集する</a></p>
+            </c:if>
          </c:when>
          <c:otherwise>
             <h2>お探しのデータは見つかりませんでした。</h2>

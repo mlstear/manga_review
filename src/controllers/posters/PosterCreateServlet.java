@@ -70,6 +70,8 @@ public class PosterCreateServlet extends HttpServlet {
                 em.persist(p);
                 em.getTransaction().commit();
                 em.close();
+
+                request.getSession().setAttribute("login_poster", p);
                 request.getSession().setAttribute("flush", "登録が完了しました。");
                 response.sendRedirect(request.getContextPath()+"/index.html");
             }

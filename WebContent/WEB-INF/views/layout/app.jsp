@@ -10,15 +10,27 @@
     </head>
     <body>
        <div id="wrapper">
-         <div id="header">
-           <h1><a>漫画レビュー投稿サイト</a></h1>
-         </div>
-         <div id="content">
+          <div id="header">
+             <div id="header_menu">
+                 <h1><a href="<c:url value='/' />">漫画レビュー投稿サイト</a></h1>&nbsp;&nbsp;&nbsp;
+                 <c:if test="${sessionScope.login_poster !=null}">
+                     <a href="<c:url value='/comics/index' />">漫画タイトル一覧</a>&nbsp;
+                     <a href="<c:url value='/posters/index' />">投稿者一覧</a>&nbsp;
+                 </c:if>
+             </div>
+             <c:if test="${sessionScope.login_poster !=null}">
+                <div id="poster_name">
+                   <c:out value="${sessionScope.login_poster.name}"/>&nbsp;さん&nbsp;&nbsp;&nbsp;
+                   <a href="<c:url value='/logout' />">ログアウト</a>
+                </div>
+             </c:if>
+          </div>
+          <div id="content">
            ${param.content}
-         </div>
-         <div id="footer">
+          </div>
+          <div id="footer">
            by Reo Murata.
-         </div>
+          </div>
        </div>
     </body>
 </html>
