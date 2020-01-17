@@ -11,7 +11,7 @@
     <body>
        <div id="wrapper">
          <div id="header">
-           <h1>漫画レビュー投稿サイト</h1>
+           <h1><a>漫画レビュー投稿サイト</a></h1>
          </div>
          <div id="content">
            ${param.content}
