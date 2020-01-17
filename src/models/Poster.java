@@ -27,8 +27,8 @@ import javax.persistence.Table;
             query = "SELECT COUNT(p) FROM Poster AS p WHERE p.name = :name"
             ),
     @NamedQuery(
-            name="checkLoginPassword",
-            query="SELECT p FROM Poster AS p WHERE p.password=:pass"
+            name="checkLoginPasswordAndName",
+            query="SELECT p FROM Poster AS p WHERE p.password=:pass AND p.name = :name"
             )
 })
 @Entity
