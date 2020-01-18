@@ -115,3 +115,39 @@ pre {
 h3 {
     font-size: larger;
 }
+table#poster_list th {
+    width: 30%;
+    padding: 10px 2%;
+}
+
+table#poster_list td {
+    width: 29%;
+    padding: 10px 2%;
+}
+
+tr.row1 {
+        background-color: #f2f2f2;
+}
+tr.row0 {
+        background-color: #ffffff;
+}
+table#comic_list th {
+    font-weight: bold;
+    padding: 10px 2%;
+}
+
+table#comic_list .report_name {
+    width: 20%;
+    padding: 10px 2%;
+}
+table#comic_list .report_date {
+    width: 20%;
+}
+
+table#comic_list .report_title {
+    width: 37%;
+}
+
+table#comic_list .report_action {
+    width: 13%;
+}

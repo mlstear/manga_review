@@ -21,6 +21,10 @@ import javax.persistence.Table;
             name = "getComicsCount",
             query = "SELECT COUNT(c) FROM Comic AS c"
             ),
+    @NamedQuery(
+            name = "checkRegisteredTitle",
+            query = "SELECT COUNT(c) FROM Comic AS c WHERE c.title = :title"
+            ),
 })
 @Entity
 public class Comic {
