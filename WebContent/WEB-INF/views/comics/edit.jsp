@@ -4,7 +4,7 @@
   <c:param name="content">
      <c:choose>
          <c:when test="${comic != null}">
-                <h2> ${comic.title} 　作品情報編集ページ</h2>
+                <h2> 作品情報編集ページ</h2>
                 <form method="POST" action="<c:url value='/comics/update' />">
                     <c:import url="_form.jsp" />
                 </form>

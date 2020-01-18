@@ -13,13 +13,13 @@ public class ComicValidator {
         List<String> errors =new ArrayList<String>();
 
         String title_error=_validateTitle(c.getTitle(),title_duplicate_check_flag);
-        if(!title_error.equals("")){
+        if(! title_error.equals("")){
             errors.add(title_error);
         }
 
 
         String author_error=_validateAuthor(c.getAuthor());
-        if(!author_error.equals("")){
+        if(! author_error.equals("")){
             errors.add(author_error);
         }
         return errors;
