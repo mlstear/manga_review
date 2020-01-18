@@ -116,6 +116,10 @@ h3 {
     font-size: larger;
 }
 table#poster_list th {
+    font-weight: bold;
+    padding: 10px 2%;
+}
+table#poster_list th {
     width: 30%;
     padding: 10px 2%;
 }
@@ -150,4 +154,8 @@ table#comic_list .report_title {
 
 table#comic_list .report_action {
     width: 13%;
+}
+h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
