@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="../layout/app.jsp">
   <c:param name="content">
     <c:if test="${flush!=null}">
@@ -14,17 +15,17 @@
           <tr>
              <th class="review_comicTitle">作品タイトル</th>
              <th class="review_poster">投稿者</th>
-             <th class="review_Title">レビュータイトル</th>
-             <th class="review_view">詳細</th>
+             <th class="review_Title">レビュー詳細</th>
              <th class="review_score">スコア（1~5点）</th>
+             <th class="review_updateTime">登録日時</th>
           </tr>
           <c:forEach var="review" items="${reviews}" varStatus="status">
              <tr class="row${status.count%2}">
                 <td class="review_comicTitle"><c:out value="${review.comic.title}"/></td>
                 <td class="review_poster"><c:out value="${review.poster.name}"/></td>
-                <td Class="review_Title">${review.title}</td>
-                <td class="review_view"><a href="<c:url value='/reviews/show?id=${review.id}' />">レビューを見る</a></td>
+                <td Class="review_Title"><a href="<c:url value='/reviews/show?id=${review.id}' />">${review.title}</a></td>
                 <td Class="review_Score">${review.score}点</td>
+                <td class="review_updateTime"><fmt:formatDate value="${review.created_at}" pattern="yyyy-MM-dd HH:mm" /></td>
              </tr>
           </c:forEach>
        </tbody>

@@ -13,6 +13,19 @@
                 <h2>お探しのデータは見つかりませんでした。</h2>
             </c:otherwise>
         </c:choose>
+      <!--  -<c:if test="${sessionScope.login_poster.id==6}">
+               <p><a href="#" onclick="confirmDestroy();">このレビューを削除する</a></p>
+                  <form method="POST" action="<c:url value='/reviews/destroy' />">
+                    <input type="hidden" name="_token" value="${_token}" />
+                  </form>
+                  <script>
+                      function confirmDestroy() {
+                          if(confirm("本当に削除してよろしいですか？")) {
+                              document.forms[1].submit();
+                        }
+                    }
+                </script>
+         </c:if> -->
 
         <p><a href="<c:url value='/index.html' />">一覧に戻る</a></p>
     </c:param>

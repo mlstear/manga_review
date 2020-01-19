@@ -39,7 +39,7 @@ public class ReviewShowServlet extends HttpServlet {
 
         request.setAttribute("review", r);
         request.setAttribute("_token", request.getSession().getId());
-
+        request.getSession().setAttribute("review_id2", r.getId());
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/show.jsp");
         rd.forward(request, response);
 
