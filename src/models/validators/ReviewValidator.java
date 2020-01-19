@@ -44,6 +44,9 @@ public class ReviewValidator {
         if(score == null || score.equals("")) {
             return "スコアを入力してください。";
             }
+        if(score>5||score<1){
+            return "スコアは1〜５点を入力してください。";
+        }
 
         return "";
 

@@ -7,24 +7,24 @@
             <c:out value="${flush}"></c:out>
          </div>
     </c:if>
-    <h2>最新レビュー</h2>
+    <h2>最新レビュー 一覧</h2>
     <h4>レビューを投稿したい作品が無い場合は「漫画タイトル一覧」より作品を新規追加してください。</h4><br />
     <table id="review_list">
        <tbody>
           <tr>
              <th class="review_comicTitle">作品タイトル</th>
-             <th class="review_Title">レビュータイトル</th>
              <th class="review_poster">投稿者</th>
+             <th class="review_Title">レビュータイトル</th>
              <th class="review_view">詳細</th>
-             <th class="review_score">スコア</th>
+             <th class="review_score">スコア（1~5点）</th>
           </tr>
           <c:forEach var="review" items="${reviews}" varStatus="status">
              <tr class="row${status.count%2}">
                 <td class="review_comicTitle"><c:out value="${review.comic.title}"/></td>
-                <td Class="review_Title">${review.title}</td>
                 <td class="review_poster"><c:out value="${review.poster.name}"/></td>
+                <td Class="review_Title">${review.title}</td>
                 <td class="review_view"><a href="<c:url value='/reviews/show?id=${review.id}' />">レビューを見る</a></td>
-                <td Class="review_Score">${review.score}</td>
+                <td Class="review_Score">${review.score}点</td>
              </tr>
           </c:forEach>
        </tbody>
