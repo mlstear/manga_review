@@ -11,7 +11,7 @@
                <tbody>
                   <tr>
                      <th>名前</th>
-                     <td><c:out value="${poster.name}"/></td>
+                     <td><c:out value="${poster.name}"/><c:if test="${poster.id==6}">(管理者)</c:if></td>
                   </tr>
                   <tr>
                      <th>登録日時</th>

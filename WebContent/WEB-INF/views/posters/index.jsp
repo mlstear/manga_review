@@ -18,7 +18,7 @@
             </tr>
             <c:forEach var="poster" items="${posters}" varStatus="status">
                <tr class="row${status.count%2}">
-                  <td><c:out value="${poster.name}"/></td>
+                  <td><c:out value="${poster.name}"/><c:if test="${poster.id==6}">(管理者)</c:if></td>
                   <td>
                      <a href="<c:url value='/reviews/userIndex?id=${poster.id}' />">一覧</a>
                   </td>

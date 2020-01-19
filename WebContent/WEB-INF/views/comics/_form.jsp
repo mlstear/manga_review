@@ -13,7 +13,7 @@
 <input type="text" name="title" value="${comic.title}"/>
 <br /><br />
 
-<label for="author">作者名 ※性名がある場合間にスペースを開けてください。</label><br />
+<label for="author">作者名 </label><br />
 <input type="text" name="author" value="${comic.author}"/>
 <br /><br />
 
