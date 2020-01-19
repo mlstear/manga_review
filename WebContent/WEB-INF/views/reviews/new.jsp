@@ -5,7 +5,7 @@
         <h2>レビュー　新規登録ページ</h2>
 
         <form method="POST" action="<c:url value='/reviews/create' />">
-            <c:import url="_form.jsp" />
+            <c:import url="new_form.jsp" />
         </form>
 
         <p><a href="<c:url value='/comics/index' />">一覧に戻る</a></p>
