@@ -156,6 +156,26 @@ table#comic_list .report_action {
     width: 13%;
 }
 h4 {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 15px;
+}
+table#review_list th {
+    font-weight: bold;
+    padding: 10px 2%;
+}
+
+table#review_list .report_name {
+    width: 20%;
+    padding: 10px 2%;
+}
+table#review_list .report_date {
+    width: 20%;
+}
+
+table#review_list .report_title {
+    width: 37%;
+}
+
+table#review_list .report_action {
+    width: 13%;
 }
