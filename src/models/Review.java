@@ -24,6 +24,30 @@ import javax.persistence.Table;
             name = "getReviewsCount",
             query = "SELECT COUNT(r) FROM Review AS r"
             ),
+    @NamedQuery(
+            name = "getUserAllReviews",
+            query = "SELECT r FROM Review AS r WHERE r.poster = :poster ORDER BY r.id DESC"
+            ),
+    @NamedQuery(
+            name = "getUserReviewsCount",
+            query = "SELECT COUNT(r) FROM Review AS r WHERE r.poster = :poster"
+            ),
+    @NamedQuery(
+            name = "getOnlyAllReviews",
+            query = "SELECT r FROM Review AS r WHERE r.comic = :comic ORDER BY r.id DESC"
+            ),
+    @NamedQuery(
+            name = "getOnlyReviewsCount",
+            query = "SELECT COUNT(r) FROM Review AS r WHERE r.comic = :comic"
+            ),
+    @NamedQuery(
+            name = "getMyAllReviews",
+            query = "SELECT r FROM Review AS r WHERE r.poster = :poster ORDER BY r.id DESC"
+            ),
+    @NamedQuery(
+            name = "getMyReviewsCount",
+            query = "SELECT COUNT(r) FROM Review AS r WHERE r.poster = :poster"
+            ),
 })
 
 @Entity

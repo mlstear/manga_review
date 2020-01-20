@@ -54,7 +54,7 @@ public class ReviewUpdateServlet extends HttpServlet {
                 request.setAttribute("review", r);
                 request.setAttribute("errors", errors);
 
-                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/edit.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/myEdit.jsp");
                 rd.forward(request, response);
 
             }else{
@@ -66,10 +66,9 @@ public class ReviewUpdateServlet extends HttpServlet {
 
                 request.getSession().removeAttribute("review_id");
 
-                response.sendRedirect(request.getContextPath() + "/index.html");
-            }
-
+                response.sendRedirect(request.getContextPath() + "/reviews/myIndex");
     }
 
 }
+    }
 }

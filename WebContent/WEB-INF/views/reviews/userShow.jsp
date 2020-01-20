@@ -58,7 +58,7 @@
                         }
                     }
                 </script>
-         </c:if>
+             </c:if>
 
 
 
@@ -67,6 +67,6 @@
                 <h2>お探しのデータは見つかりませんでした。</h2>
          </c:otherwise>
       </c:choose>
-      <p><a href="<c:url value="/index.html" />">トップページに戻る</a></p>
+      <p><a href="<c:url value="/reviews/userIndex?id=${sessionScope.poster_id.id}" />">一覧に戻る</a></p>
    </c:param>
 </c:import>

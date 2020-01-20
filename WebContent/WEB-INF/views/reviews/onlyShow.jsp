@@ -45,8 +45,7 @@
                   </tr>
                </tbody>
             </table>
-
-            <c:if test="${sessionScope.login_poster.id==6}">
+             <c:if test="${sessionScope.login_poster.id==6}">
                <p><a href="#" onclick="confirmDestroy();">このレビューを削除する</a></p>
                   <form method="POST" action="<c:url value='/reviews/destroy' />">
                     <input type="hidden" name="_token" value="${_token}" />
@@ -58,7 +57,7 @@
                         }
                     }
                 </script>
-         </c:if>
+             </c:if>
 
 
 
@@ -67,6 +66,6 @@
                 <h2>お探しのデータは見つかりませんでした。</h2>
          </c:otherwise>
       </c:choose>
-      <p><a href="<c:url value="/index.html" />">トップページに戻る</a></p>
+      <p><a href="<c:url value="/reviews/onlyIndex?id=${sessionScope.comic_id.id}" />">一覧に戻る</a></p>
    </c:param>
 </c:import>

@@ -45,7 +45,9 @@
                   </tr>
                </tbody>
             </table>
-
+            <c:if test="${sessionScope.login_poster.id==review.poster.id}">
+               <p><a href="<c:url value="/reviews/myEdit?id=${review.id}" />">このレビューを編集する</a></p>
+            </c:if>
             <c:if test="${sessionScope.login_poster.id==6}">
                <p><a href="#" onclick="confirmDestroy();">このレビューを削除する</a></p>
                   <form method="POST" action="<c:url value='/reviews/destroy' />">
@@ -58,7 +60,7 @@
                         }
                     }
                 </script>
-         </c:if>
+             </c:if>
 
 
 
@@ -67,6 +69,6 @@
                 <h2>お探しのデータは見つかりませんでした。</h2>
          </c:otherwise>
       </c:choose>
-      <p><a href="<c:url value="/index.html" />">トップページに戻る</a></p>
+      <p><a href="<c:url value="/reviews/myIndex" />">マイレビューに戻る</a></p>
    </c:param>
 </c:import>

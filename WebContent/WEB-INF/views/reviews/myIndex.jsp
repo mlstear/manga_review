@@ -8,8 +8,7 @@
             <c:out value="${flush}"></c:out>
          </div>
     </c:if>
-    <h2> 最新レビュー 一覧</h2>
-    <h3>「漫画タイトル一覧」よりレビューを投稿してください。</h3><br />
+    <h2><c:out value="${sessionScope.login_poster.name}" />さん　マイレビュー</h2>
 
     <table id="review_list">
        <tbody>
@@ -24,7 +23,7 @@
              <tr class="row${status.count%2}">
                 <td class="review_comicTitle"><c:out value="${review.comic.title}"/></td>
                 <td class="review_poster"><c:out value="${review.poster.name}"/></td>
-                <td Class="review_Title"><a href="<c:url value='/reviews/show?id=${review.id}' />">${review.title}</a></td>
+                <td Class="review_Title"><a href="<c:url value='/reviews/myShow?id=${review.id}' />">${review.title}</a></td>
                 <td Class="review_Score">${review.score}点</td>
                 <td class="review_updateTime"><fmt:formatDate value="${review.created_at}" pattern="yyyy-MM-dd HH:mm" /></td>
              </tr>
@@ -44,5 +43,6 @@
                 </c:choose>
             </c:forEach>
        </div>
+       <p><a href="<c:url value='/index.html' />">トップページに戻る</a></p>
   </c:param>
 </c:import>

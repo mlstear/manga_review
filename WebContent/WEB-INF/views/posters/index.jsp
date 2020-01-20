@@ -8,7 +8,7 @@
             </div>
       </c:if>
 
-      <h2>投稿者一覧</h2>
+      <h2>投稿者 一覧</h2>
       <table id="poster_list">
          <tbody>
             <tr>
@@ -20,7 +20,7 @@
                <tr class="row${status.count%2}">
                   <td><c:out value="${poster.name}"/><c:if test="${poster.id==6}">(管理者)</c:if></td>
                   <td>
-                     <a href="<c:url value='/reviews/userIndex?id=${poster.id}' />">一覧</a>
+                     <a href="<c:url value='/reviews/userIndex?id=${poster.id}' />">このユーザーのレビューを見る</a>
                   </td>
                   <td>
                      <a href="<c:url value='/posters/show?id=${poster.id}' />">詳細を表示</a>
