@@ -27,6 +27,6 @@
                 </script>
          </c:if>
 
-        <p><a href="<c:url value='/reviews/userIndex?id=${sessionScope.poster_id.id}' />">一覧に戻る</a></p>
+        <p><a href="<c:url value="/reviews/myIndex" />">マイレビューに戻る</a></p>
     </c:param>
 </c:import>
