@@ -60,6 +60,13 @@ public class ReviewMyIndexServlet extends HttpServlet {
         request.setAttribute("reviews_count", reviews_count);
         request.setAttribute("page", page);
 
+
+        if(request.getSession().getAttribute("flush") != null) {
+            request.setAttribute("flush", request.getSession().getAttribute("flush"));
+            request.getSession().removeAttribute("flush");
+        }
+
+
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/myIndex.jsp");
         rd.forward(request, response);
 

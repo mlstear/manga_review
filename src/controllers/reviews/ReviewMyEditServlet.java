@@ -43,7 +43,7 @@ public class ReviewMyEditServlet extends HttpServlet {
         if(r!=null&&login_poster.getId()==r.getPoster().getId());{
             request.setAttribute("review", r);
             request.setAttribute("_token", request.getSession().getId());
-            request.getSession().setAttribute("review_id", r.getId());
+            request.getSession().setAttribute("review_id2", r.getId());
             request.getSession().setAttribute("poster_id", r.getPoster());
         }
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/myEdit.jsp");

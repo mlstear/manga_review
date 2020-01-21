@@ -39,7 +39,7 @@ public class ReviewUpdateServlet extends HttpServlet {
         if(_token != null && _token.equals(request.getSession().getId())) {
             EntityManager em = DBUtil.createEntityManager();
 
-            Review r = em.find(Review.class, (Integer)(request.getSession().getAttribute("review_id")));
+            Review r = em.find(Review.class, (Integer)(request.getSession().getAttribute("review_id2")));
 
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
