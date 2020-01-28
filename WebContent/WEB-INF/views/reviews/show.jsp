@@ -45,9 +45,7 @@
                   </tr>
                </tbody>
             </table>
-            <!-- <c:if test="${sessionScope.login_poster.id==review.poster.id}">
-               <p><a href="<c:url value="/reviews/myEdit?id=${review.id}" />">このレビューを編集する</a></p>
-            </c:if> -->
+
 
              <c:if test="${sessionScope.login_poster.id==6}">
                <p><a href="#" onclick="confirmDestroy();">このレビューを削除する</a></p>
