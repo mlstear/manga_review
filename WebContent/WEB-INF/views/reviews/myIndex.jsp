@@ -8,7 +8,7 @@
             <c:out value="${flush}"></c:out>
          </div>
     </c:if>
-    <h2><c:out value="${sessionScope.login_poster.name}" />さん　マイレビュー</h2>
+    <h2><c:out value="${sessionScope.login_poster.name}" />さん　マイページ</h2>
 
     <table id="review_list">
        <tbody>
@@ -43,6 +43,7 @@
                 </c:choose>
             </c:forEach>
        </div>
+       <p><a href="<c:url value='/posters/myShow' />">投稿者詳細を見る</a></p>
        <p><a href="<c:url value='/index.html' />">トップページに戻る</a></p>
   </c:param>
 </c:import>

@@ -21,7 +21,7 @@
              <c:if test="${sessionScope.login_poster !=null}">
                 <div id="poster_name">
                    <c:out value="${sessionScope.login_poster.name}"/>&nbsp;さん<c:if test="${sessionScope.login_poster.id==6}">(管理者)</c:if>&nbsp;&nbsp;&nbsp;
-                   <a href="<c:url value='/reviews/myIndex' />">マイレビュー</a>&nbsp;&nbsp;&nbsp;
+                   <a href="<c:url value='/reviews/myIndex' />">マイページ</a>&nbsp;&nbsp;&nbsp;
                    <a href="<c:url value='/logout' />">ログアウト</a>
                 </div>
              </c:if>

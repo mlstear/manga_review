@@ -4,38 +4,36 @@
 <c:import url="/WEB-INF/views/layout/app.jsp">
    <c:param name="content">
       <c:choose>
-         <c:when test="${poster !=null}">
-            <h2>${poster.name} さんの登録情報　詳細ページ</h2>
+         <c:when test="${login_poster !=null}">
+            <h2>${login_poster.name} さんの登録情報　詳細ページ</h2>
 
             <table>
                <tbody>
                   <tr>
                      <th>名前</th>
-                     <td><c:out value="${poster.name}"/><c:if test="${poster.id==6}">(管理者)</c:if></td>
+                     <td><c:out value="${login_poster.name}"/><c:if test="${login_poster.id==6}">(管理者)</c:if></td>
                   </tr>
                   <tr>
                      <th>登録日時</th>
                      <td>
-                       <fmt:formatDate value="${poster.created_at}" pattern="yyyy-MM-dd HH:mm:ss"/>
+                       <fmt:formatDate value="${login_poster.created_at}" pattern="yyyy-MM-dd HH:mm:ss"/>
                      </td>
                   </tr>
                   <tr>
                      <th>更新日時</th>
                      <td>
-                       <fmt:formatDate value="${poster.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" />
+                       <fmt:formatDate value="${login_poster.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" />
                      </td>
                   </tr>
                </tbody>
             </table>
-            <c:if test="${sessionScope.login_poster.id == poster.id}">
-               <p><a href="<c:url value='/posters/edit?id=${poster.id}' />">登録情報を編集する</a></p>
-            </c:if>
+               <p><a href="<c:url value='/posters/myEdit' />">登録情報を編集する</a></p>
          </c:when>
          <c:otherwise>
             <h2>お探しのデータは見つかりませんでした。</h2>
          </c:otherwise>
       </c:choose>
 
-      <p><a href="<c:url value='/posters/index' />">一覧に戻る</a></p>
+      <p><a href="<c:url value='/reviews/myIndex' />">マイページに戻る</a></p>
    </c:param>
 </c:import>

@@ -21,7 +21,7 @@
                       <th>レビュータイトル</th>
                       <td><c:out value="${review.title}"/></td>
                   </tr>
-                  <tr>
+                  <tr class="box1">
                       <th>内容</th>
                       <td>
                          <pre><c:out value="${review.content}" /></pre>

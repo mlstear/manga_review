@@ -3,11 +3,11 @@
 <c:import url="/WEB-INF/views/layout/app.jsp">
    <c:param name="content">
       <c:choose>
-         <c:when test="${poster!=null}">
-            <h2>${poster.name}　さんの登録情報 編集ページ</h2>
+         <c:when test="${login_poster!=null}">
+            <h2>${login_poster.name}　さんの登録情報 編集ページ</h2>
             <p>（パスワードは変更する場合のみ入力してください）</p>
-            <form method="POST" action="<c:url value='/posters/update' />">
-                <c:import url="_form.jsp" />
+            <form method="POST" action="<c:url value='/posters/myUpdate' />">
+                <c:import url="myEdit_form.jsp" />
             </form>
 
             <c:if test="${sessionScope.login_poster.id!=6}">
@@ -29,6 +29,6 @@
             <h2>お探しのデータは見つかりませんでした。</h2>
          </c:otherwise>
       </c:choose>
-      <p><a href="<c:url value='/posters/index' />">一覧に戻る</a></p>
+      <p><a href="<c:url value='/reviews/myIndex' />">マイページに戻る</a></p>
    </c:param>
 </c:import>

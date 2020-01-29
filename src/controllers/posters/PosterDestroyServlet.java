@@ -43,7 +43,7 @@ public class PosterDestroyServlet extends HttpServlet {
             em.close();
             request.getSession().setAttribute("flush", "削除が完了しました。");
 
-            response.sendRedirect(request.getContextPath() + "/posters/index");
+            response.sendRedirect(request.getContextPath() + "/logout");
     }
 
 }
