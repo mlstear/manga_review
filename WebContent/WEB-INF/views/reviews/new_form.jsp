@@ -27,7 +27,7 @@
 <br /><br />
 
 <label for="score">スコア（1〜５点）</label><br />
-<input type="number" name="score" value="${review.score}"  min="1" max="5"/>
+<input type="number" name="score" value=0  min="1" max="5"/>
 <br /><br />
 
 <input type="hidden" name="_token" value="${_token}" />

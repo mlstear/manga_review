@@ -41,7 +41,7 @@ public class ReviewValidator {
         return "";
     }
     private static String _validateScore(Integer score) {
-        if(score == null || score.equals("")) {
+        if(score==0) {
             return "スコアを入力してください。";
             }
         if(score>5||score<1){
