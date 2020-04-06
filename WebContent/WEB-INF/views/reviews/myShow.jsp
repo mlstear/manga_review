@@ -48,7 +48,7 @@
             <c:if test="${sessionScope.login_poster.id==review.poster.id}">
                <p><a href="<c:url value="/reviews/myEdit?id=${review.id}" />">このレビューを編集する</a></p>
             </c:if>
-            <c:if test="${sessionScope.login_poster.id==6}">
+
                <p><a href="#" onclick="confirmDestroy();">このレビューを削除する</a></p>
                   <form method="POST" action="<c:url value='/reviews/destroy' />">
                     <input type="hidden" name="_token" value="${_token}" />
@@ -56,11 +56,11 @@
                   <script>
                       function confirmDestroy() {
                           if(confirm("本当に削除してよろしいですか？")) {
-                              document.forms[1].submit();
+                              document.forms[0].submit();
                         }
                     }
                 </script>
-             </c:if>
+
 
 
 

@@ -114,6 +114,11 @@ pre {
 }
 h3 {
     font-size: larger;
+
+}
+h4 {
+    font-size: larger;
+
 }
 table#poster_list th {
     font-weight: bold;
@@ -192,4 +197,9 @@ pre {
     margin: 0;
     padding: 0;
 }
-
+#poster_name a{
+    text-decoration: underline;
+}
+#header_menu a{
+    text-decoration: underline;
+}
