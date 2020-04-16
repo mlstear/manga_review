@@ -27,6 +27,7 @@ import javax.persistence.Table;
     @NamedQuery(
             name = "getUserAllReviews",
             query = "SELECT r FROM Review AS r WHERE r.poster = :poster ORDER BY r.id DESC"
+
             ),
     @NamedQuery(
             name = "getUserReviewsCount",

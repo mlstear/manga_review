@@ -56,10 +56,10 @@ public class ReviewOnlyIndexServlet extends HttpServlet {
 
         em.close();
         request.getSession().setAttribute("comicTitle", c.getTitle());
+        request.getSession().setAttribute("comic_id", c.getId());
         request.setAttribute("reviews", reviews);
         request.setAttribute("reviews_count", reviews_count);
         request.setAttribute("page", page);
-        request.getSession().removeAttribute("comic_id");
 
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/onlyIndex.jsp");

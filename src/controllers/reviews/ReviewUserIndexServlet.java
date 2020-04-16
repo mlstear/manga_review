@@ -59,7 +59,7 @@ public class ReviewUserIndexServlet extends HttpServlet {
         request.setAttribute("reviews", reviews);
         request.setAttribute("reviews_count", reviews_count);
         request.setAttribute("page", page);
-        request.getSession().removeAttribute("poster_id");
+        request.getSession().setAttribute("poster_id", p.getId());
 
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reviews/userIndex.jsp");
