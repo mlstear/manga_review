@@ -7,6 +7,7 @@
         <title>漫画レビュー投稿サイト</title>
         <link rel="stylesheet" href="<c:url value='/css/reset.css'/>">
         <link rel="stylesheet" href="<c:url value='/css/style.css'/>">
+        <script src="<c:url value='https://code.jquery.com/jquery-3.5.1.min.js'/>"></script>
     </head>
     <body>
        <div id="wrapper">
@@ -33,5 +34,7 @@
            by Reo Murata.
           </div>
        </div>
+
+       <script src="<c:url value='/JS/script.js'/>"></script>
     </body>
 </html>
