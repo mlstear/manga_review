@@ -11,14 +11,14 @@
      <h3>※レビューを投稿したい作品が無い場合は下部の「新規タイトルの登録」をしてください。</h3><br />
      <table id="comic_list">
             <tbody>
-                <tr>
+                <tr class="tableTitle">
                     <th class="cimic_title">作品タイトル</th>
                     <th class="cimic_review">レビュー</th>
                     <th class="comic_action">レビュー作成</th>
                 </tr>
                 <c:forEach var="comic" items="${comics}" varStatus="status">
-                    <tr class="row${status.count % 2}">
-                        <td class="cimic_title"><a href="<c:url value='/comics/show?id=${comic.id}' />"><c:out value="${comic.title}" /></a></td>
+                    <tr class="row${status.count % 2} tableBody">
+                        <td class="cimic_title"><a href="<c:url value='/comics/show?id=${comic.id}' />">「<c:out value="${comic.title}" />」</a></td>
                         <td class="cimic_review"> <a href="<c:url value='/reviews/onlyIndex?id=${comic.id}' />">この作品のレビューを見る</a></td>
                         <td class="comic_action"><a href="<c:url value='/reviews/new?id=${comic.id}' />">新規レビューを書く</a></td>
                     </tr>

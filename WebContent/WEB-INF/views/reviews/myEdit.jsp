@@ -27,6 +27,6 @@
                 </script>
          </c:if>
 
-        <p><a href="<c:url value="/reviews/myIndex" />">マイレビューに戻る</a></p>
+        <p><a href="<c:url value="/reviews/myIndex" />">マイページトップに戻る</a></p>
     </c:param>
 </c:import>

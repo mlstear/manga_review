@@ -8,11 +8,11 @@
             <c:out value="${flush}"></c:out>
          </div>
     </c:if>
-    <h2>「<c:out value="${comicTitle}" /> 」のレビュー</h2>
+    <h2>「<c:out value="${comicTitle}" /> 」<span>のレビュー</span></h2>
 
     <table id="review_list">
        <tbody>
-          <tr>
+          <tr class="tableTitle">
              <th class="review_comicTitle">作品タイトル</th>
              <th class="review_poster">投稿者</th>
              <th class="review_Title">レビュー詳細</th>
@@ -20,7 +20,7 @@
              <th class="review_updateTime">登録日時</th>
           </tr>
           <c:forEach var="review" items="${reviews}" varStatus="status">
-             <tr class="row${status.count%2}">
+             <tr class="row${status.count%2} tableBody">
                 <td class="review_comicTitle"><c:out value="${review.comic.title}"/></td>
                 <td class="review_poster"><c:out value="${review.poster.name}"/></td>
                 <td Class="review_Title"><a href="<c:url value='/reviews/onlyShow?id=${review.id}' />">${review.title}</a></td>

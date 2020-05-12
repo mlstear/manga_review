@@ -8,11 +8,11 @@
             <c:out value="${flush}"></c:out>
          </div>
     </c:if>
-    <h2><c:out value="${posterName}" /> さんのレビュー</h2>
+    <h2><c:out value="${posterName}" /> さんの<span>レビュー</span></h2>
 
     <table id="review_list">
        <tbody>
-          <tr>
+          <tr class="tableTitle">
              <th class="review_comicTitle">作品タイトル</th>
              <th class="review_poster">投稿者</th>
              <th class="review_Title">レビュー詳細</th>

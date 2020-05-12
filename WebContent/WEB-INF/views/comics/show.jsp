@@ -38,6 +38,6 @@
                 <h2>お探しのデータは見つかりませんでした。</h2>
          </c:otherwise>
       </c:choose>
-      <p><a href="<c:url value='/comics/index' />">一覧に戻る</a></p>
+      <p><a href="<c:url value='/comics/index' />">漫画タイトル一覧に戻る</a></p>
    </c:param>
 </c:import>

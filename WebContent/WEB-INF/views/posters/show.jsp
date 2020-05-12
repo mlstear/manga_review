@@ -36,6 +36,6 @@
          </c:otherwise>
       </c:choose>
 
-      <p><a href="<c:url value='/posters/index' />">一覧に戻る</a></p>
+      <p><a href="<c:url value='/posters/index' />">投稿者一覧に戻る</a></p>
    </c:param>
 </c:import>

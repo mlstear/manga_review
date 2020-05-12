@@ -5,12 +5,12 @@
    <c:param name="content">
       <c:choose>
          <c:when test="${review !=null}">
-            <h2>レビュー　詳細ページ</h2>
+            <h2>レビュー　<span>詳細ページ</span></h2>
 
             <table>
                <tbody>
                   <tr>
-                      <th>作品タイトル</th>
+                      <th>作品<span>タイトル</span></th>
                       <td><c:out value="${review.comic.title}"/></td>
                   </tr>
                   <tr>
@@ -18,7 +18,7 @@
                       <td><c:out value="${review.poster.name}"/></td>
                   </tr>
                   <tr>
-                      <th>レビュータイトル</th>
+                      <th>レビュー<span>タイトル</span></th>
                       <td><c:out value="${review.title}"/></td>
                   </tr>
                   <tr class="box1">
@@ -28,7 +28,7 @@
                       </td>
                   </tr>
                   <tr>
-                      <th>スコア（1~5点）</th>
+                      <th>スコア<span>（1~5点）</span></th>
                       <td> <c:out value="${review.score}" />　点</td>
                   </tr>
                   <tr>

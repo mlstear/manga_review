@@ -11,13 +11,13 @@
       <h2>投稿者 一覧</h2>
       <table id="poster_list">
          <tbody>
-            <tr>
+            <tr class="tableTitle">
                <th>名前</th>
                <th>レビュー</th>
                <th>詳細</th>
             </tr>
             <c:forEach var="poster" items="${posters}" varStatus="status">
-               <tr class="row${status.count%2}">
+               <tr class="row${status.count%2} tableBody" >
                   <td><c:out value="${poster.name}"/><c:if test="${poster.id==6}">(管理者)</c:if></td>
                   <td>
                      <a href="<c:url value='/reviews/userIndex?id=${poster.id}' />">このユーザーのレビューを見る</a>

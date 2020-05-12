@@ -1,0 +1,132 @@
+@media screen and (max-width:1080px) {
+    #header_menu {
+        display: block;
+        width: auto;
+    }
+    a.fas.fa-bars.menu-icon {
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+        float: right;
+        font-size: 30px;
+    }
+    #poster_name {
+        display: none;
+        width: auto;
+    }
+    .icon {
+        padding-bottom: 20px;
+        display: block;
+    }
+    @media screen and (max-width:680px) {
+        #header {
+            padding-bottom: 40px;
+        }
+        #poster_name {
+            display: none;
+            width: auto;
+        }
+        #header_menu {
+            padding-left: 0;
+        }
+        #header_menu a {
+            display: block;
+        }
+        a.fas.fa-bars.menu-icon {
+            color: white;
+            display: block;
+            cursor: pointer;
+            float: right;
+            font-size: 20px;
+        }
+        .blank {
+            margin: 10px;
+        }
+        h2 {
+            font-size: 3vh;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        h3, h4 {
+            font-size: 15px;
+        }
+        .review_updateTime {
+            display: none;
+        }
+        #review_list {
+            width: 90%;
+            margin: 30px auto;
+            font-size: 18px;
+        }
+        .tableTitle {
+            display: none;
+        }
+        tr.tableBody,.tableBody td {
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+        #poster_list td:first-child:before {
+            content: "-Poster-";
+            background: #333333;
+            box-sizing: border-box;
+            color: #fff;
+            height: 23px;
+            padding: 2px 10px;
+            position: absolute;
+            top: -25px;
+            left: -1.1%;
+            display: block;
+            width: 102.1%;
+            margin-top: 1px;
+            line-height: 23px;
+        }
+
+        #comic_list td:first-child:before {
+            content: "-Comic-";
+            background: #333333;
+            box-sizing: border-box;
+            color: #fff;
+            height: 23px;
+            padding: 2px 10px;
+            position: absolute;
+            top: -25px;
+            left: -1.1%;
+            display: block;
+            width: 102.1%;
+            margin-top: 1px;
+            line-height: 23px;
+        }
+
+        #review_list td:first-child:before {
+            content: "-Review-";
+            background: #333333;
+            box-sizing: border-box;
+            color: #fff;
+            height: 23px;
+            padding: 2px 10px;
+            position: absolute;
+            top: -25px;
+            left: -1.1%;
+            display: block;
+            width: 102.1%;
+            margin-top: 1px;
+            line-height: 23px;
+        }
+
+
+        tr {
+            margin-bottom: 54px;
+        }
+        .icon {
+            padding-bottom: 10px;
+        }
+        span {
+            display: inline-block;
+        }
+
+        table#poster_list td{
+            width:100%;
+        }
+    }
+}

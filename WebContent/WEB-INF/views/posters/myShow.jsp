@@ -34,6 +34,6 @@
          </c:otherwise>
       </c:choose>
 
-      <p><a href="<c:url value='/reviews/myIndex' />">マイページに戻る</a></p>
+      <p><a href="<c:url value='/reviews/myIndex' />">マイページトップに戻る</a></p>
    </c:param>
 </c:import>
