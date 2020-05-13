@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Poster;
 import models.Review;
 import utils.DBUtil;
 
@@ -36,6 +37,7 @@ public class ReviewDestroyServlet extends HttpServlet {
             EntityManager em = DBUtil.createEntityManager();
 
             Review r = em.find(Review.class, (Integer)(request.getSession().getAttribute("review_id2")));
+            Poster p=(Poster)request.getSession().getAttribute("login_poster");
 
             em.getTransaction().begin();
             em.remove(r);
@@ -46,7 +48,7 @@ public class ReviewDestroyServlet extends HttpServlet {
             request.getSession().setAttribute("flush", "削除が完了しました。");
 
 
-            response.sendRedirect(request.getContextPath() + "/index.html");
+            response.sendRedirect(request.getContextPath() + "/reviews/myIndex?id="+p.getId());
 
 
 

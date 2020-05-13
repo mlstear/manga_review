@@ -5,7 +5,7 @@
    <c:param name="content">
       <c:choose>
          <c:when test="${comic !=null}">
-            <h2>${comic.title} の詳細ページ</h2>
+            <h2>${comic.title} の<span>詳細ページ</span></h2>
 
             <table>
               <tbody>

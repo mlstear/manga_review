@@ -18,6 +18,24 @@
         padding-bottom: 20px;
         display: block;
     }
+    #accordion_content {
+        display: block;
+        color: white;
+        background-color: #333333;
+        text-align: center;
+        width: auto;
+        padding: 10px 20px; float : right;
+        position: relative;
+        top: 12px;
+        left: 17px;
+        z-index: 100;
+        border-radius: 9px;
+        border: 1px solid;
+        float: right;
+    }
+    #accordion_content a {
+        text-decoration: underline;
+    }
     @media screen and (max-width:680px) {
         #header {
             padding-bottom: 40px;
@@ -61,10 +79,11 @@
         .tableTitle {
             display: none;
         }
-        tr.tableBody,.tableBody td {
+        tr.tableBody, .tableBody td {
             display: block;
             width: 100%;
             position: relative;
+            line-height: 29px;
         }
         #poster_list td:first-child:before {
             content: "-Poster-";
@@ -81,7 +100,6 @@
             margin-top: 1px;
             line-height: 23px;
         }
-
         #comic_list td:first-child:before {
             content: "-Comic-";
             background: #333333;
@@ -97,7 +115,6 @@
             margin-top: 1px;
             line-height: 23px;
         }
-
         #review_list td:first-child:before {
             content: "-Review-";
             background: #333333;
@@ -113,8 +130,6 @@
             margin-top: 1px;
             line-height: 23px;
         }
-
-
         tr {
             margin-bottom: 54px;
         }
@@ -124,9 +139,12 @@
         span {
             display: inline-block;
         }
-
-        table#poster_list td{
-            width:100%;
+        table#poster_list td {
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
         }
     }
+}
 }

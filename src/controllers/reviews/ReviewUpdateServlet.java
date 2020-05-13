@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Poster;
 import models.Review;
 import models.validators.ReviewValidator;
 import utils.DBUtil;
@@ -40,6 +41,7 @@ public class ReviewUpdateServlet extends HttpServlet {
             EntityManager em = DBUtil.createEntityManager();
 
             Review r = em.find(Review.class, (Integer)(request.getSession().getAttribute("review_id2")));
+            Poster p=(Poster)request.getSession().getAttribute("login_poster");
 
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
@@ -66,7 +68,7 @@ public class ReviewUpdateServlet extends HttpServlet {
 
                 request.getSession().removeAttribute("review_id");
 
-                response.sendRedirect(request.getContextPath() + "/reviews/myIndex");
+                response.sendRedirect(request.getContextPath() + "/reviews/myIndex?id="+p.getId());
     }
 
 }

@@ -111,6 +111,7 @@ td {
     width: 66%;
     padding: 10px 2%;
     overflow-wrap:break-word;
+
 }
 
 button {
@@ -280,5 +281,21 @@ a#title{
 
 }
 
+.tableBody td{
+
+    line-height:40px;
+}
+
+a.new_signUp{
+    display: inline-block;
+    border: 1px solid #333333;
+    padding: 3px 5px;
+    color: white;
+    background-color: cornflowerblue;
+
+}
+#accordion_content{
+   display:none;
+ }
 
 

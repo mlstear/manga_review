@@ -20,8 +20,8 @@
              <th class="review_updateTime">登録日時</th>
           </tr>
           <c:forEach var="review" items="${reviews}" varStatus="status">
-             <tr class="row${status.count%2}">
-                <td class="review_comicTitle"><c:out value="${review.comic.title}"/></td>
+             <tr class="row${status.count%2} tableBody">
+                <td class="review_comicTitle">「<c:out value="${review.comic.title}"/>」</td>
                 <td class="review_poster"><c:out value="${review.poster.name}"/></td>
                 <td Class="review_Title"><a href="<c:url value='/reviews/userShow?id=${review.id}' />">${review.title}</a></td>
                 <td Class="review_Score">${review.score}点</td>
