@@ -8,15 +8,15 @@
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver
 "/>
-			<property name="javax.persistence.schema-generation.database.action" value="create"/>
+			<property name="javax.persistence.schema-generation.database.action" value="none"/>
 			<property name="hibernate.dialect	" value="org.hibernate.dialect.MySQL5Dialect
 "/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql	" value="true"/>
 			<property name="javax.persistence.schema-generation.scripts.action" value="none"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/manga_review?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>
-			<property name="javax.persistence.jdbc.user" value="revuser"/>
-			<property name="javax.persistence.jdbc.password" value="revpass"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_97077d48fb4affb?reconnect=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8"/>
+			<property name="javax.persistence.jdbc.user" value="b8d1a31db54d20"/>
+			<property name="javax.persistence.jdbc.password" value="697e1967"/>
 		</properties>
 	</persistence-unit>
 </persistence>

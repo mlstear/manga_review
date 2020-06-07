@@ -13,13 +13,19 @@
     #poster_name {
         display: none;
         width: auto;
+
     }
+
+    #accordion{
+        display: block;
+    }
+
     .icon {
         padding-bottom: 20px;
-        display: block;
+
     }
     #accordion_content {
-        display: block;
+
         color: white;
         background-color: #333333;
         text-align: center;

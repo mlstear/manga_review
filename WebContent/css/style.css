@@ -28,10 +28,6 @@ a.fas.fa-bars.menu-icon{
     cursor:pointer;
 }
 
-.icon{
-    display:none;
-
-}
 
 #content {
     padding: 2px 0 100px;
@@ -293,8 +289,9 @@ a.new_signUp{
     color: white;
     background-color: cornflowerblue;
 
+
 }
-#accordion_content{
+#accordion{
    display:none;
  }
 

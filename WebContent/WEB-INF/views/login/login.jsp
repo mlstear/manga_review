@@ -29,5 +29,7 @@
        </div>
 
       <p><a class="new_signUp" href="<c:url value='/posters/new' />">新規登録はこちら</a></p>
+      <br>
+      <p>※切断されたときはページの更新をしてください。</p>
    </c:param>
 </c:import>
